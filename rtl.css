@@ -1,0 +1,15 @@
+@import url("../responsive/rtl.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+pre, code {
+	direction: ltr;
+	text-align: left;
+}
+.IN-widget {
+	float: left;
+	width: 100%;
+}
+.IN-widget > span {
+	float: left;
+}
