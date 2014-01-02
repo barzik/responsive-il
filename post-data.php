@@ -1,9 +1,6 @@
 ﻿<?php
 
-// Exit if accessed directly
-if( !defined( 'ABSPATH' ) ) {
-	exit;
-}
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
  * Post Data Template-Part File
@@ -20,11 +17,11 @@ if( !defined( 'ABSPATH' ) ) {
  */
 ?>
 
-<?php if( !is_page() && !is_search() ) { ?>
+<?php if( ! is_page() && ! is_search() ) : ?>
 
 	<div>
 		<?php the_tags( __( 'תגיות:', 'responsive' ) . ' ', ', ', '' ); ?>
 		<?php printf( "פורסם בקטגוריה:  %s", get_the_category_list( ', ' ) ); ?>
 	</div><!-- end of .post-data -->
 
-<?php } ?>
+<?php endif; ?>
