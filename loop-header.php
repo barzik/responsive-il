@@ -1,9 +1,6 @@
 <?php
 
-// Exit if accessed directly
-if( !defined( 'ABSPATH' ) ) {
-	exit;
-}
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
  * Loop Header Template-Part File
@@ -34,7 +31,7 @@ responsive_breadcrumb_lists();
 /**
  * Display archive information
  */
-if( is_tag() || is_author() || is_date() ) {
+if( is_tag() || is_author() || is_date() ) :
 	?>
 	<h6 class="title-archive">
 		<?php
@@ -48,21 +45,19 @@ if( is_tag() || is_author() || is_date() ) {
 		?>
 	</h6>
 <?php
-}
+endif;
 
-if( is_category()) {
+if( is_category() ) :
 	print "<h1>".single_cat_title('', false)."</h1>";
 	echo category_description(); 
 	print '<div class="fb-like" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>';
-} 
+endif;
 
 
 /**
  * Display Search information
  */
 
-if( is_search() ) {
-	?>
+if( is_search() ) : ?>
 	<h6 class="title-search-results"><?php printf( __( 'Search results for: %s', 'responsive' ), '<span>' . get_search_query() . '</span>' ); ?></h6>
-<?php
-}
+<?php endif;
