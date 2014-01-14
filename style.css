@@ -85,3 +85,9 @@ body .featured-title {
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style], .fb-comments, .fb-comments span, .fb-comments.fb_iframe_widget span iframe, div.ads, .fb-like, #fbComments {
+    	clear: both;
+	float: right;
+	overflow: hidden;
+	width: 100% !important;
+}
