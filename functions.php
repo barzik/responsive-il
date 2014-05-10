@@ -66,3 +66,15 @@ if( ! function_exists( 'responsive_il_post_meta_data' ) ) :
 	}
 	
 endif;
+
+/******************************************************************************
+ * Remove Read More links
+ */
+add_action('after_setup_theme', function(){
+    remove_filter( 'excerpt_more', 'responsive_auto_excerpt_more' );
+    remove_filter( 'get_the_excerpt', 'responsive_custom_excerpt_more' );
+});
+
+add_filter( 'excerpt_more', function ( $more ) {
+	return '<span class="ellipsis">&hellip;</span>';
+});
